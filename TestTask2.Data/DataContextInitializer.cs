@@ -43,6 +43,41 @@ namespace TestTask2.Data
             });
 
             #endregion Оборудование
+
+            #region Примечания
+
+            context.Notes.Add(new NoteEntity
+            {
+                Article = "013G2920",
+                NoteText = "Примечания к оборудованию 1"
+            });
+
+            context.Notes.Add(new NoteEntity
+            {
+                Article = "023Z0012",
+                NoteText = "Примечания к оборудованию 2"
+            });
+
+            #endregion Примечания
+
+            #region Ссылки
+
+            context.Links.Add(new LinkEntity
+            {
+                Article = "013G2920",
+                Url = "http://www.danfoss.com/russia/Products/Categories/",
+                Name = "Ссылка 1"
+            });
+
+            context.Links.Add(new LinkEntity
+            {
+                Article = "023Z0012",
+                Url = "http://www.danfoss.com/russia/Products/Categories/",
+                Name = "Ссылка 2"
+            });
+
+            #endregion Ссылки
+            
         }
     }
 }

@@ -21,8 +21,6 @@
                 <th>Описание</th>
                 <th>Цена</th>
                 <th>На складе</th>
-                <th>Примечания</th>
-                <th>Ссылки</th>
             </tr>
         </thead>
         <tbody id="data-update"></tbody>
@@ -46,8 +44,7 @@
                     var inStock = val.InStock === true ? "да" : "нет";
                     newRows += "<tr>";
                     newRows += "<td>" + article + "</td><td>" + description + "</td><td>" + price +
-                        "</td><td>" + inStock + "</td><td>" + "-" + "</td>";
-                    newRows += "<td><a href=\"#\" title=\"Удалить\"><i class=\"fa fa-times\"></i></a></td>";
+                        "</td><td>" + inStock + "</td>";
                     newRows += "<tr>";
                 });
                 $("#data-update").html(newRows);

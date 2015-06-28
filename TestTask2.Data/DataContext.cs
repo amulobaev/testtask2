@@ -18,6 +18,10 @@ namespace TestTask2.Data
 
         public DbSet<EquipmentEntity> Equipment { get; set; }
 
+        public DbSet<NoteEntity> Notes { get; set; }
+
+        public DbSet<LinkEntity> Links { get; set; }
+
         /// <summary>
         /// Настройка инициализатора контекста
         /// </summary>
@@ -25,6 +29,10 @@ namespace TestTask2.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer(new DataContextInitializer());
+
+            modelBuilder.Entity<EquipmentEntity>().ToTable("Equipment");
+            modelBuilder.Entity<LinkEntity>().ToTable("Links");
+            modelBuilder.Entity<NoteEntity>().ToTable("Notes");
 
             base.OnModelCreating(modelBuilder);
         }
