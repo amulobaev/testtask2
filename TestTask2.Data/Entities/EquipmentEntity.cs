@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TestTask2.Data.Entities
 {
     /// <summary>
     /// Сущность "Оборудование"
     /// </summary>
-    internal class EquipmentEntity
+    public class EquipmentEntity
     {
         /// <summary>
         /// Артикул оборудования

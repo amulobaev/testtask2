@@ -8,7 +8,7 @@ namespace TestTask2
     {
         public override void Load()
         {
-            Bind<IEquipmentRepository, EquipmentRepository>();
+            Bind<IEquipmentRepository>().To<EquipmentRepository>();
         }
     }
 }

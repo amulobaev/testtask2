@@ -7,13 +7,21 @@ using TestTask2.Data.Entities;
 
 namespace TestTask2.Data.Repositories
 {
+    /// <summary>
+    /// Репозитарий "Оборудование"
+    /// </summary>
     public class EquipmentRepository : IEquipmentRepository
     {
         static EquipmentRepository()
         {
+            // Настройка маппинга
             Mapper.CreateMap<EquipmentEntity, Equipment>();
         }
 
+        /// <summary>
+        /// Получение всех сущностей из репозитария
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Equipment> GetAll()
         {
             using (DataContext context = new DataContext())

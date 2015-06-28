@@ -40,9 +40,13 @@
             $.getJSON("/api/equipment", function (data) {
                 var newRows = '';
                 $.each(data, function (key, val) {
+                    var article = val.Article;
+                    var description = val.Description;
+                    var price = val.Price.toFixed(2);
+                    var inStock = val.InStock === true ? "да" : "нет";
                     newRows += "<tr>";
-                    newRows += "<td>" + val.Article + "</td><td>" + val.Description + "</td><td>" + val.Price +
-                        "</td><td>" + val.InStock + "</td><td>" + val.InStock + "</td>";
+                    newRows += "<td>" + article + "</td><td>" + description + "</td><td>" + price +
+                        "</td><td>" + inStock + "</td><td>" + "-" + "</td>";
                     newRows += "<td><a href=\"#\" title=\"Удалить\"><i class=\"fa fa-times\"></i></a></td>";
                     newRows += "<tr>";
                 });

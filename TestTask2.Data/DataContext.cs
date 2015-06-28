@@ -1,30 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using TestTask2.Data.Entities;
-using TestTask2.Data.Migrations;
 
 namespace TestTask2.Data
 {
-    internal class DataContext : DbContext
+    /// <summary>
+    /// Контекст данных Entity Framework
+    /// </summary>
+    public class DataContext : DbContext
     {
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public DataContext()
-            : base("name=DataCOntext")
+            : base("name=DataContext")
         {
-        }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>());
-
-            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<EquipmentEntity> Equipment { get; set; }
 
+        /// <summary>
+        /// Настройка инициализатора контекста
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new DataContextInitializer());
 
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

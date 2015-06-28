@@ -2,6 +2,11 @@ using System.Collections.Generic;
 
 namespace TestTask2.Data.Repositories
 {
+    /// <summary>
+    /// Интерфейс базового репозитария
+    /// </summary>
+    /// <typeparam name="T">Тип модели</typeparam>
+    /// <typeparam name="K">Тип ключа</typeparam>
     public interface IRepository<T, K>
     {
         IEnumerable<T> GetAll();
