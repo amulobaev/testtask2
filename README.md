@@ -1,10 +1,13 @@
-# README #
+# Тестовое задание #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Необходимо создать пример отображения списка оборудования из базы данных. Неотъемлемой частью задания является дизайн UI (расположение элементов управления на форме).
 
-### What is this repository for? ###
+Решение должно включать в себя скрипт, создающий базу данных и таблицы, а также минимальный набор тестовых данных.
 
-* Quick summary
+### Структура базы данных  ###
+
+* Оборудование
+** 456
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
